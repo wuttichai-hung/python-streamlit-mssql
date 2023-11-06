@@ -49,4 +49,4 @@ if uploaded:
     st.write("uploaded")
 
 # Take a photo
-t = st.camera_input("Take a photo")
+# t = st.camera_input("Take a photo")

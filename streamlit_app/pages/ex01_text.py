@@ -1,5 +1,6 @@
 import streamlit as st
-
+conn = st.connection("sqlite", type="sql", autocommit=True)
+conn.driver
 st.title("My Title")
 st.header("My Header")
 st.subheader("My Subheader")

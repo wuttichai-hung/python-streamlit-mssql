@@ -1,4 +1,7 @@
 streamlit==1.28.1
 pandas
 sqlalchemy
-mssql
+pymssql
+pygwalker
+pandas-profiling
+streamlit-pandas-profiling

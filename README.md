@@ -16,7 +16,7 @@ Streamlit is an open-source app framework for Machine Learning and Data Science 
    import streamlit as st
    st.write("Hello World!")
    ```
-
+# Setup sql server using docker
 [docker image](https://hub.docker.com/_/microsoft-mssql-server)
 ```bash
 docker run --name="mssql" -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Password!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest

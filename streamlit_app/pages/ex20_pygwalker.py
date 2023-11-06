@@ -17,7 +17,8 @@ def get_pyg_html(df: pd.DataFrame) -> str:
 @st.cache_data
 def get_df() -> pd.DataFrame:
     # https://raw.githubusercontent.com/justmarkham/DAT8/master/data/bikeshare.csv
-    return pd.read_csv("https://raw.githubusercontent.com/sonarsushant/California-House-Price-Prediction/master/housing.csv")
+    # https://raw.githubusercontent.com/sonarsushant/California-House-Price-Prediction/master/housing.csv
+    return pd.read_csv("../data/housing.csv")
 
 
 df = get_df()
