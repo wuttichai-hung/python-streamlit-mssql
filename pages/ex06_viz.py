@@ -2,10 +2,16 @@ import pandas as pd
 import streamlit as st
 st.set_page_config(page_title="Demo Streamlit App", page_icon="🧊", layout="wide", initial_sidebar_state="collapsed")
 
-df = pd.read_csv("./data/housing.csv", sep=",")
+load_df = pd.read_csv("./data/housing.csv", sep=",")
+value = st.slider('Select a range of values', 0, 50, step=1)
+st.write('Values:', value)
+df = load_df.head(value)
 
 st.title("Metric")
-st.metric(label="Temperature", value="60 C", delta="3 C")
+st.metric(label="Temperature", value="60", delta="3 C")
+
+st.title("Table")
+st.table(df)
 
 st.title("Dataframe")
 st.dataframe(df)
@@ -13,7 +19,7 @@ st.dataframe(df)
 st.title("Data eitor")
 st.data_editor(df)
 
-st.title("Bar Chart")
+st.title("Chart")
 st.bar_chart(df, x="housing_median_age", y="median_house_value")
 st.line_chart(df, x="housing_median_age", y="population")
 st.scatter_chart(df, x="housing_median_age", y="median_house_value")
@@ -25,4 +31,3 @@ st.scatter_chart(df, x="housing_median_age", y="median_house_value")
 # st.pydeck_chart
 # st.graphviz_chart
 st.map(df, latitude="latitude", longitude="longitude", color=None, size=None)
-st.table(df)

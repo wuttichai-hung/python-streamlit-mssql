@@ -10,9 +10,10 @@ url = st.text_input("URL")
 click_scrape = st.button("Scrape it!!")
 if click_scrape:
     df_list = pd.read_html(url)
-    for i, df in enumerate(df_list):
-        st.subheader(f"Table{i}")
-        st.dataframe(df)
-        st.divider()
+    tab_names = [f"tbl{i}" for i in range(len(df_list))]
+    tabs = st.tabs(tab_names)
+    for i, tab in enumerate(tabs):
+        with tabs[i]:
+            st.dataframe(df_list[i])
 
 

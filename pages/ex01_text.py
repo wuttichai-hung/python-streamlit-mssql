@@ -40,8 +40,8 @@ st.markdown("---")
 st.write("This is :blue[test]")
 
 st.markdown(":blue[$$ E = mc^2 $$]")
-new_title = '<p style="font-family:sans-serif; color:blue; font-size: 42px;">Text Colors</p>'
 
+new_title = '<p style="font-family:sans-serif; color:blue; font-size: 42px;">Text Colors</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
 title_alignment="""
