@@ -7,8 +7,10 @@
 ### What is Streamlit?
 
 [Streamlit](<(https://streamlit.io/)>) is an open-source app framework for Machine Learning and Data Science teams. Create beautiful web apps in minutes.
-
-![qrgit](/images/streamlit_star.png)
+web_demo
+![web_demo](/images/web_demo.png)
+ref: [https://nicjac.dev/posts/how-to-build-machine-learning-demo-in-2022/](https://nicjac.dev/posts/how-to-build-machine-learning-demo-in-2022/)
+![streamlit_star](/images/streamlit_star.png)
 ref: [https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
 
 ### Installation and setup
