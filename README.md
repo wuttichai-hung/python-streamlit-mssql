@@ -9,13 +9,24 @@ Streamlit is an open-source app framework for Machine Learning and Data Science 
 1. Create conda environment
    1. conda create <env_name>
    2. conda activate <env_name>
-   3. pip install streamlit
-2. create file main.py
-3. add code to main.py
+   3. create requirements.txt
+      ```requirements.txt
+      streamlit
+      pandas
+      sqlalchemy
+      pymssql
+      ```
+   4. pip install -r requirements.txt
+2. create file main.py and add code below
    ```python
    import streamlit as st
    st.write("Hello World!")
    ```
+3. streamlit run main.py
+
+
+
+
 # Setup sql server using docker
 [docker image](https://hub.docker.com/_/microsoft-mssql-server)
 ```bash
@@ -38,8 +49,17 @@ docker run --name="mssql" -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Password!" -p
 
 
 conda activate <env_name>
-streamlit run main.py
-python -m streamlit run main.py
+streamlit run streamlit_app/main.py
+python -m streamlit run streamlit_app/main.py
 
 ## Third-party Modules
 - [https://streamlit.io/components](https://streamlit.io/components)
+- [Pydantic](https://github.com/lukasmasuch/streamlit-pydantic)
+- [Page](https://github.com/blackary/st_pages)
+
+
+## Configuration
+- [Theme](https://docs.streamlit.io/library/advanced-features/theming)
+
+# Cheat sheet
+- [https://docs.streamlit.io/library/cheatsheet](https://docs.streamlit.io/library/cheatsheet)

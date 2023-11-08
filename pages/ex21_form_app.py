@@ -1,11 +1,9 @@
 import streamlit as st
 from sqlalchemy.sql import text
-
+st.set_page_config(page_title="Demo Streamlit App", page_icon="🧊", layout="wide", initial_sidebar_state="collapsed")
 
 SCHEMA = "dbo"
 TABLE_NAME = "mytable"
-
-st.set_page_config(page_title="Form", page_icon=None, layout="centered", initial_sidebar_state="auto")
 
 conn = st.connection("sqlite", type="sql", autocommit=True)
 click_create = st.button("Create table")

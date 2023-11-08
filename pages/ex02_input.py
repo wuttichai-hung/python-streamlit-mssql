@@ -1,9 +1,15 @@
 import streamlit as st
+st.set_page_config(page_title="Demo Streamlit App", page_icon="🧊", layout="wide", initial_sidebar_state="collapsed")
+
+
+username = st.text_input("Username")
+password = st.text_input("Password", type="password")
 
 # button
 clicked = st.button("Click me")
 if clicked:
     st.success("Clicked")
+    st.session_state.runpage = "main"
 st.divider()
 
 # link_button
@@ -50,3 +56,6 @@ if uploaded:
 
 # Take a photo
 # t = st.camera_input("Take a photo")
+
+values = st.slider('Select a range of values', 0.0, 100.0, (25.0, 75.0))
+st.write('Values:', values)

@@ -2,11 +2,7 @@ import pandas as pd
 import streamlit.components.v1 as components
 import streamlit as st
 from pygwalker.api.streamlit import init_streamlit_comm, get_streamlit_html
-
-st.set_page_config(
-    page_title="My App",
-    layout="wide"
-)
+st.set_page_config(page_title="Demo Streamlit App", page_icon="🧊", layout="wide", initial_sidebar_state="collapsed")
 init_streamlit_comm()
 
 @st.cache_resource
@@ -18,7 +14,7 @@ def get_pyg_html(df: pd.DataFrame) -> str:
 def get_df() -> pd.DataFrame:
     # https://raw.githubusercontent.com/justmarkham/DAT8/master/data/bikeshare.csv
     # https://raw.githubusercontent.com/sonarsushant/California-House-Price-Prediction/master/housing.csv
-    return pd.read_csv("../data/housing.csv")
+    return pd.read_csv("./data/housing.csv")
 
 
 df = get_df()
